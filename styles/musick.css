@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 100px auto;
+  grid-template-columns: 200px auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+header {
+  font-family: impact;
+  background-color: lavender;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  text-align: center;
+  font-size: 150%;
+  text-shadow: 2px 2px 2px black;
+  color: lightpink;
+}
+
+nav {
+  font-family: Georgia;
+  background-color: skyblue;
+  grid-column: 1;
+  grid-row: 2;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+section {
+  font-size: 110%;
+  padding: 0px;
+}

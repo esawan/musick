@@ -1,0 +1,35 @@
+# EVERY TIME YOU MAKE A CHANGE ON APP.YAML, YOU HAAAVVVEE TO RERUN THE SERVER MANUALLY!!!
+# IN ORDER TO OD THIS CONTROL C ON COMMAND LINE TO STOP IT AND THEN RERUN THE
+# SERVER BY TYPING dev_appserver.py app.YAML
+
+runtime: python27
+# which python version
+api_version: 1
+threadsafe: yes
+# these two HAVe to be here
+
+handlers:
+- url: /favicon\.ico
+# favicon is the icon next to the name in a website tab
+  static_files: favicon.ico
+  # facivon.ico is where the favicon is located
+  upload: favicon\.ico
+
+- url: /styles
+  static_dir: styles
+  # if you ever make style sheets, put them in their own folder, instead of just one
+
+- url: /media
+  static_dir: media
+  # images also get their own folder
+
+- url: .*
+  script: main.app
+  # "everything else lol"
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest
+# changes raw Python data
